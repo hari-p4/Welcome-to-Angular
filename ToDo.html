@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="AngularJS/todo.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="CSS/main.css" rel="stylesheet" />
+    <title>ToDo</title>
+    <meta charset="utf-8" />
+</head>
+<body class="bg-danger" ng-app="todo" ng-controller="MainController">
+
+    <div class="lbl_main">
+        <form ng-submit="todoAdd()">
+            <label>Today's Tasks:</label>
+            <input class="form-control" type="text" style="width: 250px" ng-model="todoInput"  placeholder="Add New" required>
+            <!--<input  type="button" v   alue="Add" ng-click="">-->
+            <input type="submit" value="Add" class="btn btn-primary"></button><br />
+
+        </form>
+
+            <div  class="lbl_main"  ng-repeat="task in todoList">
+                <input type="checkbox"ng-click="remove()" ng-model="task.done">
+                <span ng-bind="task.todoText">{{task.name}}</span>
+            </div>
+            <!--<li><input type="checkbox" ng-show="todovalue">
+            <span>{{todovalue}}
+                </span></li>-->
+
+        <center>
+            <label style="font-size: 20px;">
+                <a href="index.html">Back</a>
+
+            </label>
+        </center>
+    </div>
+</body>
+</html>

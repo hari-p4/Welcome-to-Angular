@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="AngularJS/angular.min.js"></script>
+    <script src="AngularJS/appli.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>Math</title>
+    <meta charset="utf-8" />
+</head>
+<body class="bg-danger" ng-app="appli" ng-controller="MainController as Main">
+    <center>
+        <form>
+            <label>Number 1:</label>
+            <input type="number" class="form-control" style="width: 250px" ng-model="Main.name1" required>
+            <br />
+            <label>Number 2:</label>
+            <input type="number" class="form-control" style="width:250px" ng-model="Main.name2" required>
+            <hr />
+            <h1>Sum: {{Main.name1}} + {{Main.name2}} = {{Main.name1 + Main.name2}}</h1>
+            <h1>Multiplication: {{Main.name1}} * {{Main.name2}} = {{Main.name1 * Main.name2}}</h1>
+
+        </form><label style="font-size: 20px;">
+            <a href="index.html">Back</a>
+        </label>
+    </center>
+</body>
+</html>

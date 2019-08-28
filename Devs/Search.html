@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="AngularJS/angular.min.js"></script>
+    <script src="AngularJS/search.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="CSS/main.css" rel="stylesheet" />
+</head>
+<body class="bg-danger" ng-app="search" ng-controller="MainController as smain">
+    <div class="lbl_main-search">
+
+        <label>Search For: &nbsp; <input class="form-control" width="250px" type="text" ng-model="searchfor" required> </label><br />
+
+        <div ng-repeat="person in smain.people | filter:searchfor">
+            <p>{{person.name}} <br /> {{person.phone}}</p>
+
+        </div>
+        <center>
+            <label style="font-size: 20px;">
+                <a href="../index.html">Back</a>
+
+            </label>
+        </center>
+    </div>
+</body>
+</html>
